@@ -1,0 +1,51 @@
+name: KindlyHelp
+api: 'Bukkit'
+version: '1.2'
+main: kindly.klan.KindlyHelpPlugin
+api-version: '1.20'
+authors: [ Kindly Klan ]
+description: Un plugin auxiliar para servidores de Minecraft, especialmente diseñado para lobbies
+commands:
+  kindlyhelp:
+    description: Comando principal del plugin KindlyHelp
+    usage: /kindlyhelp <reload|setspawn|tptospawn|togglevoidspawn|sendtestannounce|showcredits|getlobbyitems|hideplayers|showplayers|opennav|navigator>
+    aliases: [kh]
+    permission: kindlyhelp.use
+    permission-message: No tienes permiso para usar este comando.
+  jumppad:
+    description: Gestiona los JumpPads del servidor
+    usage: /jumppad <create|remove|list|cancel|help>
+    aliases: [jp]
+    permission: kindlyhelp.jumppad
+    permission-message: No tienes permiso para usar este comando.
+permissions:
+  kindlyhelp.reload:
+    description: Permite al jugador recargar la configuración del plugin
+    default: op
+  kindlyhelp.setspawn:
+    description: Permite al jugador establecer la ubicación del spawn
+    default: op
+  kindlyhelp.tptospawn:
+    description: Permite al jugador teletransportar a otros jugadores al spawn
+    default: op
+  kindlyhelp.togglevoidspawn:
+    description: Permite al jugador activar/desactivar la función de void spawn
+    default: op
+  kindlyhelp.sendtestannounce:
+    description: Permite al jugador enviar un anuncio de patrocinador de prueba
+    default: op
+  kindlyhelp.showcredits:
+    description: Permite al jugador mostrar los créditos
+    default: op
+  kindlyhelp.getlobbyitems:
+    description: Permite al jugador obtener los ítems de lobby
+    default: true
+  kindlyhelp.togglevisibility:
+    description: Permite al jugador ocultar/mostrar otros jugadores
+    default: true
+  kindlyhelp.navigator:
+    description: Permite al jugador usar el navegador de servidores
+    default: true
+  kindlyhelp.jumppad:
+    description: Permite al jugador gestionar los JumpPads
+    default: op

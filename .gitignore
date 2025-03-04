@@ -1,0 +1,17 @@
+.gradle/
+build/
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.tmp
+*.tmp.*
+*.swp
+.vscode/
+bin/
