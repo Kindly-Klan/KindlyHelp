@@ -27,11 +27,16 @@ public class ServerNavigatorListener implements Listener {
             event.setCancelled(true); // Prevenir que se tomen los ítems
             
             if (event.getCurrentItem() != null && event.getCurrentItem().getType() != Material.AIR) {
+                Player player = (Player) event.getWhoClicked();
                 String serverName = navigator.getServerNameFromItem(event.getCurrentItem());
-                if (serverName != null && !serverName.isEmpty()) {
-                    Player player = (Player) event.getWhoClicked();
-                    navigator.connectToServer(player, serverName);
-                    player.closeInventory();
+                
+                if (serverName != null) {
+                    if (serverName.equals("CLOSE_MENU")) {
+                        player.closeInventory();
+                    } else {
+                        navigator.connectToServer(player, serverName);
+                        player.closeInventory();
+                    }
                 }
             }
         }

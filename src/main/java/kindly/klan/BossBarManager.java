@@ -111,9 +111,6 @@ public class BossBarManager {
                 duration = 1;
             }
             
-            // Registrar la duración en el log para depuración
-            plugin.getLogger().info("BossBar '" + key + "' cargado con duración: " + duration + " segundos");
-            
             bossBars.add(new BossBarInfo(message, colorName, styleName, duration));
         }
         
